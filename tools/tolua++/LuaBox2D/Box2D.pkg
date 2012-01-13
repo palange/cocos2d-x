@@ -1,0 +1,52 @@
+$#include <Box2D/Box2D.h>
+$#include <Box2D/Rope/b2Rope.h>
+
+$pfile "b2Settings.pkg"
+$pfile "b2Math.pkg"
+$pfile "b2World.pkg"
+$pfile "b2Body.pkg"
+$pfile "b2Fixture.pkg"
+
+// Shapes
+$pfile "b2Shape.pkg"
+$pfile "b2PolygonShape.pkg"
+
+// Contacts
+//$pfile "b2Contact.pkg"
+//$pfile "b2PolygonAndCircleContact.pkg"
+//$pfile "b2PolygonContact.pkg"
+//$pfile "b2ChainAndCircleContact.pkg"
+//$pfile "b2ChainAndPolygonContact.pkg"
+//$pfile "b2CircleContact.pkg"
+//$pfile "b2EdgeAndCircleContact.pkg"
+//$pfile "b2EdgeAndPolygonContact.pkg"
+
+//$pfile "b2BlockAllocator.pkg"
+//$pfile "b2BroadPhase.pkg"
+//$pfile "b2ChainShape.pkg"
+//$pfile "b2CircleShape.pkg"
+//$pfile "b2Collision.pkg"
+//$pfile "b2ContactManager.pkg"
+//$pfile "b2ContactSolver.pkg"
+//$pfile "b2Distance.pkg"
+//$pfile "b2DistanceJoint.pkg"
+//$pfile "b2Draw.pkg"
+//$pfile "b2DynamicTree.pkg"
+//$pfile "b2EdgeShape.pkg"
+
+//$pfile "b2Joint.pkg"
+//$pfile "b2FrictionJoint.pkg"
+//$pfile "b2GearJoint.pkg"
+
+//$pfile "b2MouseJoint.pkg"
+//$pfile "b2PrismaticJoint.pkg"
+
+//$pfile "b2PulleyJoint.pkg"
+//$pfile "b2RevoluteJoint.pkg"
+//$pfile "b2Rope.pkg"
+//$pfile "b2RopeJoint.pkg"
+//$pfile "b2TimeOfImpact.pkg"
+//$pfile "b2TimeStep.pkg"
+//$pfile "b2WeldJoint.pkg"
+//$pfile "b2WheelJoint.pkg"
+//$pfile "b2WorldCallbacks.pkg"
