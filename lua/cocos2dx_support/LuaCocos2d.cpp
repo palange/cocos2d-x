@@ -1,6 +1,6 @@
 /*
 ** Lua binding: Cocos2d
-** Generated automatically by tolua++-1.0.92 on 01/04/12 13:49:26.
+** Generated automatically by tolua++-1.0.92 on Wed Feb  1 12:10:33 2012.
 */
 
 #include "LuaCocos2d.h"
@@ -12,10 +12,10 @@
 
 #include "tolua++.h"
 
-using namespace cocos2d;
-
 /* Exported function */
 TOLUA_API int  tolua_Cocos2d_open (lua_State* tolua_S);
+
+#include "LuaCocos2d.h"
 
 /* function to release collected object via destructor */
 #ifdef __cplusplus
@@ -69676,6 +69676,71 @@ static int tolua_Cocos2d_cocos2d_CCParticleSystem_setRotatePerSecondVar00(lua_St
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* method: setPositionType of class  cocos2d::CCParticleSystem */
+#ifndef TOLUA_DISABLE_tolua_Cocos2d_cocos2d_CCParticleSystem_setPositionType00
+static int tolua_Cocos2d_cocos2d_CCParticleSystem_setPositionType00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"cocos2d::CCParticleSystem",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  cocos2d::CCParticleSystem* self = (cocos2d::CCParticleSystem*)  tolua_tousertype(tolua_S,1,0);
+  cocos2d::tCCPositionType t = ((cocos2d::tCCPositionType) (int)  tolua_tonumber(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setPositionType'", NULL);
+#endif
+  {
+   self->setPositionType(t);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'setPositionType'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: getPositionType of class  cocos2d::CCParticleSystem */
+#ifndef TOLUA_DISABLE_tolua_Cocos2d_cocos2d_CCParticleSystem_getPositionType00
+static int tolua_Cocos2d_cocos2d_CCParticleSystem_getPositionType00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"cocos2d::CCParticleSystem",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  cocos2d::CCParticleSystem* self = (cocos2d::CCParticleSystem*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'getPositionType'", NULL);
+#endif
+  {
+   cocos2d::tCCPositionType tolua_ret = (cocos2d::tCCPositionType)  self->getPositionType();
+   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'getPositionType'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* method: addParticle of class  cocos2d::CCParticleSystem */
 #ifndef TOLUA_DISABLE_tolua_Cocos2d_cocos2d_CCParticleSystem_addParticle00
 static int tolua_Cocos2d_cocos2d_CCParticleSystem_addParticle00(lua_State* tolua_S)
@@ -75414,6 +75479,9 @@ TOLUA_API int tolua_Cocos2d_open (lua_State* tolua_S)
   tolua_endmodule(tolua_S);
   tolua_module(tolua_S,"cocos2d",0);
   tolua_beginmodule(tolua_S,"cocos2d");
+   tolua_constant(tolua_S,"kCCPositionTypeFree",cocos2d::kCCPositionTypeFree);
+   tolua_constant(tolua_S,"kCCPositionTypeRelative",cocos2d::kCCPositionTypeRelative);
+   tolua_constant(tolua_S,"kCCPositionTypeGrouped",cocos2d::kCCPositionTypeGrouped);
    #ifdef __cplusplus
    tolua_cclass(tolua_S,"CCParticleSystem","cocos2d::CCParticleSystem","cocos2d::CCNode",tolua_collect_cocos2d__CCParticleSystem);
    #else
@@ -75453,6 +75521,8 @@ TOLUA_API int tolua_Cocos2d_open (lua_State* tolua_S)
     tolua_function(tolua_S,"setRotatePerSecond",tolua_Cocos2d_cocos2d_CCParticleSystem_setRotatePerSecond00);
     tolua_function(tolua_S,"getRotatePerSecondVar",tolua_Cocos2d_cocos2d_CCParticleSystem_getRotatePerSecondVar00);
     tolua_function(tolua_S,"setRotatePerSecondVar",tolua_Cocos2d_cocos2d_CCParticleSystem_setRotatePerSecondVar00);
+    tolua_function(tolua_S,"setPositionType",tolua_Cocos2d_cocos2d_CCParticleSystem_setPositionType00);
+    tolua_function(tolua_S,"getPositionType",tolua_Cocos2d_cocos2d_CCParticleSystem_getPositionType00);
     tolua_function(tolua_S,"addParticle",tolua_Cocos2d_cocos2d_CCParticleSystem_addParticle00);
     tolua_function(tolua_S,"initParticle",tolua_Cocos2d_cocos2d_CCParticleSystem_initParticle00);
     tolua_function(tolua_S,"stopSystem",tolua_Cocos2d_cocos2d_CCParticleSystem_stopSystem00);

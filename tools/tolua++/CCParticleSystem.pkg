@@ -1,5 +1,11 @@
 namespace cocos2d {
 
+typedef enum {
+    kCCPositionTypeFree,
+    kCCPositionTypeRelative,
+    kCCPositionTypeGrouped,
+}tCCPositionType;
+
 class CCParticleSystem : public CCNode, public CCTextureProtocol {
 	CCParticleSystem();
 	static CCParticleSystem * particleWithFile(const char *plistFile);
@@ -35,6 +41,9 @@ class CCParticleSystem : public CCNode, public CCTextureProtocol {
 	void setRotatePerSecond(float degrees);
 	float getRotatePerSecondVar();
 	void setRotatePerSecondVar(float degrees);
+
+	void setPositionType(tCCPositionType t);
+	tCCPositionType getPositionType();
 
 	bool addParticle();
 	void initParticle(tCCParticle* particle);
